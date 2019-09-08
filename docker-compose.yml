@@ -1,9 +1,9 @@
 version: '3'
 services:
   atm3:
-    image: atm3:$VERSION
+    image: atm3
     build: 
       context: .
-      args:
-        PACK_URL: ${PACK_URL}
-      
+    ports:
+      - 25565:25565
+    
